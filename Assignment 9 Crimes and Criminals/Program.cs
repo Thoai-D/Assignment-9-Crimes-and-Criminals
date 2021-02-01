@@ -6,27 +6,18 @@ namespace Assignment_9_Crimes_and_Criminals
     {
         static void Main(string[] args)
         {
-            Criminal Joel = new Criminal("Joel", 31);
-            Criminal Jesus = new Criminal("Jesus", 51);
-            Criminal John = new Criminal("John", 26);
+            Criminal[] criminals = new Criminal[3];
 
-            DateTime date;
-            date = DateTime.Parse("31/01/2021");
-            Crime crime1 = new Crime(date, "Ascot", "Armed Robbery");
-            Crime crime2 = new Crime(date, "Ascot", "Assault");
-            Crime crime3 = new Crime(date, "Ascot", "Felony");
-            Crime crime4 = new Crime(date, "Ascot", "Voter Fraud");
+            criminals[0] = new Criminal("Joel", 31);
+            criminals[1] = new Criminal("Jesus", 51);
+            criminals[2] = new Criminal("John", 26);
 
-            Joel.AddCrime(crime1);
-            Joel.AddCrime(crime2);
-            Joel.AddCrime(crime3);
-           // Joel.AddCrime(crime4);
 
-            Console.WriteLine(Joel.AddCrime(crime1));
-            Console.WriteLine(Joel.AddCrime(crime2));
-            Console.WriteLine(Joel.AddCrime(crime3));
-            //Console.WriteLine(Joel.AddCrime(crime4));
+            criminals[0].AddCrime(new Crime(new Crime(DateTime.Parse("31/01/2021")), "Ascot", "Armed Robbery"));
 
+            //add crimes to all 3 criminals
+            //Write a for loop thtat lopps through all 2 criminals
+            //Loops through each crime for each criminal and prints out all the information
         }
     }
 }
