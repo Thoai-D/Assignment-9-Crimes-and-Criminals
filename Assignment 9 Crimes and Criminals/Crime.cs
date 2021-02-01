@@ -21,5 +21,10 @@ namespace Assignment_9_Crimes_and_Criminals
         {
             return Act;
         }
+
+        public string Getlocation()
+        {
+            return Location;
+        }
     }
 }
