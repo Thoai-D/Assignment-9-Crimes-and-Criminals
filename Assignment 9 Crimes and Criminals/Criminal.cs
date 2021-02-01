@@ -8,14 +8,14 @@ namespace Assignment_9_Crimes_and_Criminals
     {
         private string name;
         private int age;
-        private Crime[] CrimesCommited;
+        private Crime[] CrimesCommitted;
 
         public Criminal(string name, int age)
         {
             this.name = name;
             this.age = age;
 
-            CrimesCommited = new Crime[3];
+            CrimesCommitted = new Crime[3];
         }
 
         //Accessors
@@ -32,14 +32,14 @@ namespace Assignment_9_Crimes_and_Criminals
 
         public int CountCrimes()
         {
-            for(int i = 0; i < CrimesCommited.Length; i++)
+            for(int i = 0; i < CrimesCommitted.Length; i++)
             {
-                if (CrimesCommited[i] == null)
+                if (CrimesCommitted[i] == null)
                 {
                     return i;
                 }
             }
-            return CrimesCommited.Length;
+            return CrimesCommitted.Length;
         }
 
         // Mutators
@@ -47,14 +47,21 @@ namespace Assignment_9_Crimes_and_Criminals
         public bool AddCrime(Crime CrimeToAdd)
         {
             int CrimesCount = CountCrimes();
-            if (CrimesCount < CrimesCommited.Length)
+            if (CrimesCount < CrimesCommitted.Length)
             {
-                CrimesCommited[CountCrimes()] = CrimeToAdd;
+                CrimesCommitted[CountCrimes()] = CrimeToAdd;
                 return true;
             }
             return false;
         }
 
+        public string GetCrime(int crimenumber)
+        {
+            return CrimesCommitted[crimenumber].ToString();
+        }
+   
+
+        
         
 
         
